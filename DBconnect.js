@@ -1,13 +1,12 @@
 require("dotenv").config();
-const PORT = 5432;
 const { Client } = require("pg");
 
 const client = new Client({
 	user: "postgres",
 	host: process.env.HOST,
-	database: "ContractDB",
+	database: "postgres",
 	password: process.env.PASSWORD,
-	port: PORT,
+	port: 5432,
 });
 
 client.connect(function (err) {
